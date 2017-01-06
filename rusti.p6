@@ -1,14 +1,19 @@
 no strict;
+
+my $helpMessage = "Rust express compiler and executer.
+Version 1.0
+    Usage: 
+        rusti -[hrt] <argument>
+
+    Options:
+        -h      Show this screen.
+        -r      Remove program after execution.
+        -t      Time execution of program.";
+
 quietly {
     sub showHelp() {
-        say "
-        Usage: 
-            rusti -[hrt] <argument>
-        
-        Options:
-            -h      Show this screen.
-            -r      Remove program after execution.
-            -t      Time execution of program.";
+        say $helpMessage;
+
     }
     sub remove($filename) {
         shell 'rm -r ' ~ $filename;

@@ -1,2 +1,2 @@
 @echo off
-perl6 "C:\Program Files\Rust stable GNU 1.9\bin\rusti.p6" %*
+perl6 "%RUST_BIN_PATH%rusti.p6" %*
